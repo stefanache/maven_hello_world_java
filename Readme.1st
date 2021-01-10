@@ -1,47 +1,88 @@
-Scope: create one batch script for CLI(cmd.exe) console named "buid.bat"
-Tutorials used :
+-Scope: create one 
+                      batch script for CLI(cmd.exe) console named     "buid.bat" 
+              for 
+                      maven(mvn) 
+              under/on 
+                        Windows 10 Pro(64 bits) 
+              as operating system;
+              
+         this batch is usefully for Java only(in this case for my HelloWorld.java)
+         
+         
+-Tutorials used (Thanks a lot :):
                   1. http://tutorials.jenkov.com/maven/your-first-maven-project.html
-                  2. https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+ 
+ 2. https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
                   
-Remark: Before at all must to prepare this content for settings.xml
-        which reide in "C:\Program Files\Java\apache-maven-3.6.3\conf" directory.
+-Remark: Before at all must to prepare this content for settings.xml
+        which reside/located in "C:\Program Files\Java\apache-maven-3.6.3\conf" directory
+        (in my case the version maven is 3.6.3 ).
         For that consult this guide:
                   3. https://docs.github.com/en/free-pro-team@latest/packages/guides/configuring-apache-maven-for-use-with-github-packages
                   
                   
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+          <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                                http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <activeProfiles>
-    <activeProfile>github</activeProfile>
-  </activeProfiles>
+            <activeProfiles>
+              <activeProfile>github</activeProfile>
+            </activeProfiles>
 
-  <profiles>
-    <profile>
-      <id>github</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-        <repository>
-          <id>github</id>
-          <name>GitHub OWNER Apache Maven Packages</name>
-          <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
+            <profiles>
+              <profile>
+                <id>github</id>
+                <repositories>
+                  <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                  </repository>
+                  <repository>
+                    <id>github</id>
+                    <name>GitHub OWNER Apache Maven Packages</name>
+                    <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+                  </repository>
+                </repositories>
+              </profile>
+            </profiles>
 
-  <servers>
-    <server>
-      <id>github</id>
-      <username>stefanache</username>
-      <password>Important@_77</password>
-    </server>
-  </servers>
-</settings>
+            <servers>
+              <server>
+                <id>github</id>
+                <username>stefanache</username>
+                <password>Important@_77</password>
+              </server>
+            </servers>
+          </settings>
+          
+-Note:   My java version is (   C:/> java -version   ) :
+
+            java version "15.0.1" 2020-10-20
+            Java(TM) SE Runtime Environment (build 15.0.1+9-18)
+            Java HotSpot(TM) 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)
+            
+         with system/user environment variable (  C:/> echo %JAVA_HOME%  ):
+         
+                                                  C:\Program Files\Java\jdk-15.0.1
+            
+         My maven version is  (  C:/> mvn -version  ):
+         
+            Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+            Maven home: C:\Program Files\Java\apache-maven-3.6.3\bin\..
+            Java version: 15.0.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-15.0.1
+            Default locale: en_US, platform encoding: Cp1252
+            OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+            
+         with system/user environment variables (     C:/> echo %M2_HOME% 
+                                                 and 
+                                                      C:/> echo %MAVEN_HOME%
+                                                )
+         M2_HOME and MAVEN_HOMe with same content:    C:\Program Files\Java\apache-maven-3.6.3
+         
+              
+              
+                                                         
+         
