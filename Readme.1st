@@ -6,9 +6,9 @@
                         Windows 10 Pro(64 bits) 
               as operating system;
               
-         this batch is usefully for Java only(in this case for my HelloWorld.java)
+         this batch is usefully for Java only ( in this case for my source      .\src\main\java\mySRC\HelloWorld.java   )
          
-         
+          
 -Tutorials used (Thanks a lot :):
                   1. http://tutorials.jenkov.com/maven/your-first-maven-project.html
  
